@@ -10,6 +10,7 @@ public abstract class Character {
 	private long id;
 	private ItemList inventory;
 	private EffectList effects;
+	private Location currentLocation;
 	
 	/**
 	 * returns the character's unique ID
@@ -19,4 +20,11 @@ public abstract class Character {
 		return this.id;
 	}
 
+	public Location getLocation() {
+		return this.currentLocation;
+	}
+	
+	public void act(int choice) {
+		this.currentLocation.getEvent().act(choice);
+	}
 }

@@ -10,6 +10,7 @@ import java.util.HashMap;
  */
 public abstract class Event {
 	private Event next;
+	private Location location;
 	
 	/**
 	 * returns the resulting event chosen by the number,
@@ -18,4 +19,10 @@ public abstract class Event {
 	 * @return the resulting event
 	 */
 	public abstract Event act(int choice);
+	
+	public Location getLocation() {
+		return this.location;
+	}
+	
+	public abstract void delay();
 }
