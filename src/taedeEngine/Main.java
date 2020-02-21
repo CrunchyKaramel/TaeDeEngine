@@ -1,5 +1,5 @@
 package taedeEngine;
 
-public class Location {
+public class Main {
 
 }
